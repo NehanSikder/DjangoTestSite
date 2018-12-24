@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<a href="product/create">Create</a>
+<a id="Create" href="product/create">Create</a>
 
 {% for instance in object_list %}
 	<div class="row">
 		<p>{{ instance.id }} - {{ instance.title}}</p>
-		<a href="product/{{ instance.id }}/update/"> Update </a>
+		<a id="Update{{instance.id}}" href="product/{{ instance.id }}/update/"> Update </a>
 		<br>
-		<a href="product/{{ instance.id }}/delete/"> Delete </a>
+		<a id="Delete{{instance.id}}" href="product/{{ instance.id }}/delete/"> Delete </a>
 	</div>
 {% endfor %}
 
